@@ -16,15 +16,17 @@ public class WithdrawCash extends TitledOperation{
 
     @Override
     public boolean doOperation() {
-        Context operationContext=new Context();
         int cantidad=new ATMNumberCapturer(operationContext.getATM()).captureAmount();
         if(operationContext.getATM().hasAmount(cantidad)){
             operationContext.getATM().expelAmount(cantidad,1);
-            operationContext.getATM().print(List.of("Cantidad devuelta: " + cantidad));
+            operationContext.getATM().print(List.of("Cantidad retirada: " + cantidad));
+            System.out.println("Operacion de retirada exitosa");
             return true;
 
         } else {
             operationContext.getATM().print(List.of("Cantidad insuficiente: "));
+            System.out.println("Operacion de retirada fallida");
+
             return false;
         }
 

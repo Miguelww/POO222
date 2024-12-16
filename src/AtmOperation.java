@@ -1,7 +1,7 @@
 import javax.naming.CommunicationException;
 
 public abstract class AtmOperation {
-    private Context operationContext;
+    protected Context operationContext;
 
     public AtmOperation(Context operationContext) {
         this.operationContext = operationContext;

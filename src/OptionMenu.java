@@ -1,17 +1,25 @@
+import sienens.ATM;
+
+import javax.naming.CommunicationException;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
-import javax.naming.Context;
+
 
 
 public class OptionMenu extends AtmOperation{
-    private List<AtmOperation> operationList;
+    private List<TitledOperation> operationList;
+
     public OptionMenu(Context operationContext) {
-        super();
-        operationList = new ArrayList<AtmOperation>();
+        super(operationContext);
+        operationList = List.of(new WithdrawCash(operationContext), new AccountBalance(operationContext),
+                new LastOperations(operationContext), new ChangePassword(operationContext));
     }
 
-    public boolean doOperation() {
+    @Override
+    public boolean doOperation() throws CommunicationException {
+        return false;
     }
+
 
 }
