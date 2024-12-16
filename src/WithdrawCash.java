@@ -1,7 +1,9 @@
 import sienens.ATM;
+import urjc.UrjcBankServer;
 
 import java.io.BufferedReader;
 import java.util.List;
+import java.util.Scanner;
 
 
 public class WithdrawCash extends TitledOperation{
@@ -16,7 +18,12 @@ public class WithdrawCash extends TitledOperation{
 
     @Override
     public boolean doOperation() {
-        int cantidad=new ATMNumberCapturer(operationContext.getATM()).captureAmount();
+        ATM atm = operationContext.getATM();
+        UrjcBankServer server = operationContext.getServidor();
+        long cardNumber=atm.getCardNumber();
+        Scanner texto = new Scanner(System.in);
+        int cantidad=texto.nextInt();
+
         if(operationContext.getATM().hasAmount(cantidad)){
             operationContext.getATM().expelAmount(cantidad,1);
             operationContext.getATM().print(List.of("Cantidad retirada: " + cantidad));
