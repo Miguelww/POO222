@@ -1,10 +1,10 @@
 public class ErrorExit extends AtmOperation{
-    public ErrorExit(Context operationContext) {
+    public ErrorExit(OperationContext operationContext) {
         super(operationContext);
     }
 
     @Override
     public boolean doOperation() {
-
+        return false;
     }
 }

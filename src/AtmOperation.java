@@ -1,11 +1,17 @@
-import javax.naming.CommunicationException;
 
 public abstract class AtmOperation {
-    protected Context operationContext;
+    
+    private OperationContext operationContext;
 
-    public AtmOperation(Context operationContext) {
+    public AtmOperation(OperationContext operationContext) {
         this.operationContext = operationContext;
     }
-    public abstract boolean doOperation() throws CommunicationException;
+    public abstract boolean doOperation();
 
+    public OperationContext getOperationContext() {
+        return operationContext;
+    }
+
+    
+    
 }

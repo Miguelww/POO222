@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class WithdrawCash extends TitledOperation{
 
-    public WithdrawCash(Context operationContext) {
+    public WithdrawCash(OperationContext operationContext) {
         super(operationContext);
     }
     @Override
@@ -18,7 +18,7 @@ public class WithdrawCash extends TitledOperation{
 
     @Override
     public boolean doOperation() {
-        ATM atm = operationContext.getATM();
+      /*  ATM atm = operationContext.getATM();
         UrjcBankServer server = operationContext.getServidor();
         long cardNumber=atm.getCardNumber();
         Scanner texto = new Scanner(System.in);
@@ -36,6 +36,8 @@ public class WithdrawCash extends TitledOperation{
 
             return false;
         }
+*/
+        return false;
 
     }
 }

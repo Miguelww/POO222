@@ -2,15 +2,17 @@ import javax.naming.CommunicationException;
 import java.util.List;
 
 public class LastOperations extends TitledOperation{
-    public LastOperations(Context operationContext) {
+    public LastOperations(OperationContext operationContext) {
         super(operationContext);
 
     }
 
     @Override
-    public boolean doOperation() throws CommunicationException {
+    public boolean doOperation()  {
+        /*
         List<String> operations = operationContext.getServidor().getLastOperations(operationContext.getATM().getCardNumber());
         operationContext.getATM().print(operations);
+        */
         return true;
 
     }

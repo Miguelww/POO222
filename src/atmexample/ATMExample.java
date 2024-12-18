@@ -19,6 +19,7 @@ public class ATMExample {
     /**
      * @param args the command line arguments
      */
+    /*
     public static void main(String[] args) {
         ATM simulator = new ATM();
         UrjcBankServer bankServer = new UrjcBankServer();
@@ -74,5 +75,5 @@ public class ATMExample {
             event = simulator.waitEvent(30);
         }
     }
-    
+    */
 }

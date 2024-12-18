@@ -14,11 +14,14 @@ public class OperationContext {
     }
 
     public UrjcBankServer getServer() {
+        return this.server;
     }
     public ATM getAtm() {
+        return this.atm;
 
     }
     public String getIdiom() {
+        return this.idiom;
 
     }
     public void setIdiom(String idiom) {

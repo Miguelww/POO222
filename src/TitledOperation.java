@@ -2,7 +2,7 @@
 public abstract class TitledOperation extends AtmOperation {
 
 
-    public TitledOperation(Context operationContext) {
+    public TitledOperation(OperationContext operationContext) {
         super(operationContext);
 
     }
